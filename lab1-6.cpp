@@ -1,19 +1,23 @@
-// greatest among 10 numbers
+// smallest and largest among list of integers
 #include <iostream>
 using namespace std;
 
 class Comp
 {
     public:
+    int arr[10];
 
-    int great()
+    void set()
     {
-        int arr[10];
         cout << "Enter 10 numbers: " << endl;
         for (int i = 0; i < 10; i++)
         {
             cin >> arr[i];
         }
+    }
+
+    void sort()
+    {
         int temp;
         for (int i = 0 ; i < 9; i++)
         {
@@ -28,14 +32,28 @@ class Comp
                 
             }
         }
+    }
+
+    int great()
+    {
+        sort();
         return arr[9];
+    }
+
+    int small()
+    {
+        sort();
+        return arr[0];
     }
 };
 
 int main()
 {
     Comp obj;
-    int ans = obj.great();
-    cout << "Largest number is: " << ans <<endl;
+    obj.set();
+    int large = obj.great();
+    cout << "Largest number is: " << large <<endl;
+    int small = obj.small();
+    cout << "Smallest number is: " << small <<endl;
     return 0;
 }
