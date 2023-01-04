@@ -12,7 +12,6 @@ protected:
 class Triangle : protected Polygon
 {
 public:
-public:
     void set_sides(int a, int b, int c)
     {
         x = a;
@@ -22,9 +21,9 @@ public:
 
     float area()
     {
-        float s = 0.0;
+        float s;
         s = (x + y + z) / 2;
-        return sqrt(s * (s - x) * (s - y) * (s - z));
+        return (sqrt(s * (s - x) * (s - y) * (s - z)));
     }
 };
 
@@ -90,8 +89,8 @@ int main()
     Square poly2;
     Rectrangle poly3;
 
-    int choice;
 start:
+    int choice;
     system("clear");
     cout << "1.Trinangle" << endl;
     cout << "2.Square" << endl;
@@ -118,18 +117,19 @@ start:
         float ans = rectrangle(poly3);
         cout << "area is: " << ans << endl;
         system("read");
+        goto start;
     }
     else if (choice == 4)
     {
         cout << "Program Terminated" << endl;
-        goto end;
         system("read");
+        goto end;
     }
     else
     {
         cout << "invalid choice!" << endl;
-        goto start;
         system("read");
+        goto start;
     }
 end:
     return 0;
