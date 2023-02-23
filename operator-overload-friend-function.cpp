@@ -31,7 +31,7 @@ Distance operator+(Distance &d1, Distance &d2)
     d.m = d1.m + d2.m;
     if (d.m > 1000)
     {
-        d.km = d.km + (d.km / 1000);
+        d.km = d.km + (d.m / 1000);
         d.m = d.m % 1000;
     }
     return d;
