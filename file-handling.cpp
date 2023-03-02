@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include <iomanip>
+#include <string>
 using namespace std;
 
 int main()
@@ -9,8 +9,8 @@ int main()
     file << "well hello there" << endl;               // writes to the file
     file.close();                                     // closes the file
     string text;
-    ifstream Rfile("/home/reeves/Documents/text.txt");
-    while (getline(Rfile, file))
+    ifstream Rfile("/home/reeves/Documents/test.txt");
+    while (getline(Rfile, text))
     {
         cout << text << endl;
     }
