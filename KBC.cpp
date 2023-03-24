@@ -67,7 +67,7 @@ int main()
     system("clear");
     cout << "Welcome to KBC" << endl;
     system("read");
-    cout << "Answer all the Questions Correctly to win The Proxe Money" << endl;
+    cout << "Answer all the Questions Correctly to win The Prize Money" << endl;
     system("read");
     cout << "Even one wrong question and you will fail" << endl;
     system("read");
