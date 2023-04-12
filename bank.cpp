@@ -3,18 +3,18 @@ using namespace std;
 
 class Account
 {
-    private:
-    string name , accType;
+private:
+    string name, accType;
     float balance;
     int accNumber;
 
-    public:
-    Account(string name,int accNumber , string accType , float balance)
+public:
+    Account(string name, int accNumber, string accType, float balance)
     {
-        this-> name = name;
-        this-> accNumber = accNumber;
-        this-> accType = accType;
-        this-> balance = balance;
+        this->name = name;
+        this->accNumber = accNumber;
+        this->accType = accType;
+        this->balance = balance;
     }
 
     void deposite(float amount)
@@ -24,7 +24,7 @@ class Account
 
     void withdraw(float amount)
     {
-        if(balance > amount)
+        if (balance > amount)
         {
             balance -= amount;
         }
@@ -41,20 +41,19 @@ class Account
         cout << "balance:  " << balance << endl;
         system("read");
     }
-
 };
 
 int main()
 {
-    string name , type;
+    string name, type;
     float amount;
     int choice;
     cout << "enter name: " << endl;
     cin >> name;
     cout << "enter account type : " << endl;
     cin >> type;
-    Account acc(name , 23001 , type , 0);
-    start:
+    Account acc(name, 23001, type, 0);
+start:
     system("clear");
     cout << "1.deposite" << endl;
     cout << "2.withdraw" << endl;
@@ -67,17 +66,17 @@ int main()
         cin >> amount;
         acc.deposite(amount);
     }
-    else if(choice == 2)
+    else if (choice == 2)
     {
         cout << "enter amount" << endl;
         cin >> amount;
         acc.withdraw(amount);
     }
-    else if(choice == 3)
+    else if (choice == 3)
     {
         acc.display();
     }
-    else if(choice == 4)
+    else if (choice == 4)
     {
         goto end;
     }
@@ -87,6 +86,6 @@ int main()
         goto start;
     }
     goto start;
-    end:
+end:
     return 0;
 }
